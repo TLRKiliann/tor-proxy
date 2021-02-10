@@ -11,11 +11,11 @@ Installation:
 Configuration for torrc :
 >sudo nano /etc/tor/torrc
 
-SOCKSPort 9050
-SOCKSPort 192.168.X.Y:9999
-SOCKSPolicy accept 192.168.0.0/16
-RunAsDaemon 1
-DataDirectory /var/lib/tor
+SOCKSPort 9050 
+SOCKSPort 192.168.X.Y:9999 
+SOCKSPolicy accept 192.168.0.0/16 
+RunAsDaemon 1 
+DataDirectory /var/lib/tor 
 
 >sudo systemctl restart tor
 
@@ -42,4 +42,5 @@ Click on --> Proxy DNS when using SOCKS v5
 
 To verify your installation look at with :
 >ss -nlt
+
 >watch netstat -pute
