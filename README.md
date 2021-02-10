@@ -24,6 +24,7 @@ Save and close torrc file
 
 Restart daemon :
 >sudo systemctl restart tor
+
 Restart service :
 >sudo systemctl restart tor@default.service
 
