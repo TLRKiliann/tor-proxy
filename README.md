@@ -14,7 +14,7 @@ Configuration for torrc :
 
 SOCKSPort 9050 /
 SOCKSPort 192.168.X.Y:9999 /
-SOCKSPolicy accept 192.168.0.0/16 /
+SOCKSPolicy accept 192.168.0.0/16 \
 RunAsDaemon 1 /
 DataDirectory /var/lib/tor 
 
