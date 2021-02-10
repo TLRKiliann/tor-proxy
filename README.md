@@ -27,7 +27,7 @@ Restart daemon :
 Restart service :
 >sudo systemctl restart tor@default.service
 
-# The 2 addr (PUBLIC IP) must be differents :
+# The 2 public ip must be different :
 
 >wget -qO - https://wwww.icanhazip.com
 
@@ -44,9 +44,22 @@ Click on --> Manual proxy configuration
 
 Enter --> SOCKS host : 127.0.0.1  port : 9050
 
+Click on --> SOCKS_v5
+
 Click on --> Proxy DNS when using SOCKS v5
+
+Click ok
 
 # To verify your installation use cmd :
 >ss -nlt
 
 >watch netstat -pute
+
+Enter icanhazip.com in your address bar of your browser to verify if address is same as 
+>torsocks wget -qO - https://wwww.icanhazip.com
+
+Done !
+
+Enjoy it !
+
+ko@l@tr33
