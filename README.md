@@ -5,22 +5,26 @@ Install tor proxy on linux and raspberry pi 400
 Installation :
 >sudo apt install tor
 
+To verify installation use cmd :
 >sudo systemctl status tor
 
 >sudo systemctl status tor@default.service
 
-Configuration for torrc :
+# Configuration for torrc :
 >sudo nano /etc/tor/torrc
 
 SOCKSPort 9050 \
-# Replace XY by your IP addr (ifconfig) \
+*Replace XY by your IP addr (ifconfig)* \
 SOCKSPort 192.168.X.Y:9977 \
 SOCKSPolicy accept 192.168.X.0/16 \
 RunAsDaemon 1 \
 DataDirectory /var/lib/tor 
 
->sudo systemctl restart tor
+Save and close torrc file
 
+Restart daemon :
+>sudo systemctl restart tor
+Restart service :
 >sudo systemctl restart tor@default.service
 
 The 2 addr (PUBLIC IP) must be differents :
@@ -29,7 +33,7 @@ The 2 addr (PUBLIC IP) must be differents :
 
 >torsocks wget -qO - https://wwww.icanhazip.com
 
-To avoid a loopback when Linux start :
+To avoid a loop error when Linux start :
 >sudo systemctl disable tor
 
 Browser firefox configuration :
